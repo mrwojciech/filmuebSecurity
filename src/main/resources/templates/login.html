@@ -1,0 +1,15 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml"><head><title>Login Page</title></head><body onload='document.f.username.focus();'>
+<h3>Login...</h3><form name='f' action='/username' method='POST'>
+
+
+
+
+
+    <table>
+        <tr><td>User:</td><td><input type="text" name="username"  placeholder="user"/></td></tr>
+        <tr><td>Password:</td><td><input type="password" name="password" placeholder="password"/></td></tr>
+        <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+        <tr><td colspan='2'><input name="submit" type="submit" value="Login"   /></td></tr>
+        <input name="_csrf" type="hidden" value="baf5ba57-5768-498e-90bc-9d3639fe1554" />
+    </table>
+</form></body></html>
